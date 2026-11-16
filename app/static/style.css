@@ -1,0 +1,44 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #e8ebf3;
+  background: radial-gradient(ellipse at 80% 0, #1b2440, #0c0e13 48%);
+  font: 15px "Segoe UI", sans-serif;
+}
+main { max-width: 980px; margin: auto; padding: 56px 24px; }
+header, .section-title { display: flex; align-items: center; justify-content: space-between; }
+header { margin-bottom: 30px; }
+h1, h2 { margin: 0; }
+h1 { font-size: 38px; letter-spacing: -1.4px; }
+.eyebrow { color: #8792b2; font-size: 11px; font-weight: 700; letter-spacing: 2px; }
+.badge { padding: 8px 13px; border: 1px solid #30384f; border-radius: 30px; color: #aab4d1; font-size: 12px; }
+.panel { margin: 18px 0 24px; padding: 26px; border: 1px solid #262b38; border-radius: 16px; background: #151821; box-shadow: 0 15px 50px #0002; }
+.panel h2 { margin-bottom: 22px; font-size: 18px; }
+form { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+label { display: flex; min-width: 0; flex-direction: column; gap: 7px; color: #a5acc0; font-size: 12px; }
+input, select { width: 100%; min-width: 0; padding: 11px 12px; border: 1px solid #303646; border-radius: 8px; outline: none; background: #0e1118; color: #eef0f7; font: inherit; }
+input:focus, select:focus { border-color: #8797ff; }
+form select { overflow: hidden; text-overflow: ellipsis; }
+button { padding: 11px 15px; border: 0; border-radius: 8px; background: #6879ff; color: white; font: inherit; font-weight: 700; cursor: pointer; }
+button:hover { filter: brightness(1.08); }
+.secondary { background: #262c3b; color: #c7cde0; font-size: 12px; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 16px 0; border-top: 1px solid #292e3a; }
+.muted { margin-top: 5px; color: #8992a8; font-size: 12px; }
+.actions { display: flex; align-items: center; gap: 8px; }
+.remove { padding: 8px 10px; background: #482b38; color: #ffc3d0; font-size: 12px; }
+#notice { min-height: 16px; color: #aab4d1; font-size: 13px; }
+footer { margin: 24px 2px; color: #687187; font-size: 12px; }
+a { color: #97a4ff; }
+.editor { margin-top: 18px; }
+.add-offer select { max-width: 520px; flex: 1; }
+.offer-list .row { margin: 0; }
+@media (max-width: 700px) {
+  main { padding: 32px 16px; }
+  form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .panel { padding: 20px; }
+}
+@media (max-width: 460px) {
+  form { grid-template-columns: 1fr; }
+  .row { align-items: flex-start; flex-direction: column; }
+}
